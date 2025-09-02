@@ -1,0 +1,39 @@
+public class Main1011 {
+    public static void main(String[] args) {
+        Solution1011 sol = new Solution1011();
+        int[] weights = {1,2,3,4,5,6,7,8,9,10};
+        int days = 5;
+        System.out.println(sol.shipWithinDays(weights, days)); // Output: 15
+    }
+}
+
+class Solution1011 {
+    public int shipWithinDays(int[] weights, int days) {
+        int left = 0, right = 0;
+        for (int w : weights) {
+            left = Math.max(left, w);
+            right += w;
+        }
+        while (left < right) {
+            int mid = left + (right - left) / 2;
+            if (canShip(weights, days, mid)) {
+                right = mid;
+            } else {
+                left = mid + 1;
+            }
+        }
+        return left;
+    }
+
+    private boolean canShip(int[] weights, int days, int capacity) {
+        int usedDays = 1, curr = 0;
+        for (int w : weights) {
+            if (curr + w > capacity) {
+                usedDays++;
+                curr = 0;
+            }
+            curr += w;
+        }
+        return usedDays <= days;
+    }
+}
