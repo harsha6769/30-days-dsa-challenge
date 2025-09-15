@@ -31,7 +31,7 @@ class MyStack {
     }
 }
 
-public class Main225 {
+public class Main {
     public static void main(String[] args) {
         MyStack stack = new MyStack();
         stack.push(1);

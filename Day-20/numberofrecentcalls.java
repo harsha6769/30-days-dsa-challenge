@@ -16,7 +16,7 @@ class RecentCounter {
     }
 }
 
-public class Main933 {
+public class Main{
     public static void main(String[] args) {
         RecentCounter obj = new RecentCounter();
         System.out.println(obj.ping(1));    // 1

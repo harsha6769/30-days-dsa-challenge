@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Solution90 {
+public class Subsets {
     public List<List<Integer>> subsetsWithDup(int[] nums) {
         List<List<Integer>> res = new ArrayList<>();
         Arrays.sort(nums);
@@ -19,7 +19,7 @@ public class Solution90 {
     }
 
     public static void main(String[] args) {
-        Solution90 sol = new Solution90();
+        Solution sol = new Solution();
         int[] nums = {1, 2, 2};
         System.out.println("Subsets II: " + sol.subsetsWithDup(nums));
     }

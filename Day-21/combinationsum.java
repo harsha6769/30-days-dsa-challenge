@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Solution40 {
+public class combinationSum{
     public List<List<Integer>> combinationSum2(int[] candidates, int target) {
         List<List<Integer>> res = new ArrayList<>();
         Arrays.sort(candidates);
@@ -23,7 +23,7 @@ public class Solution40 {
     }
 
     public static void main(String[] args) {
-        Solution40 sol = new Solution40();
+        Solution sol = new Solution();
         int[] candidates = {10, 1, 2, 7, 6, 1, 5};
         int target = 8;
         System.out.println("Combination Sum II: " + sol.combinationSum2(candidates, target));

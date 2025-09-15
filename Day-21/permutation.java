@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Solution47 {
+public permutation{
     public List<List<Integer>> permuteUnique(int[] nums) {
         List<List<Integer>> res = new ArrayList<>();
         Arrays.sort(nums);
@@ -26,7 +26,7 @@ public class Solution47 {
     }
 
     public static void main(String[] args) {
-        Solution47 sol = new Solution47();
+        Solution sol = new Solution();
         int[] nums = {1, 1, 2};
         System.out.println("Permutations II: " + sol.permuteUnique(nums));
     }
